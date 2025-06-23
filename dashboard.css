@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color:rgb(224, 227, 243);
+}
+
+.sidenav {
+    height: 100vh;
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #421d9a;
+    color: white;
+    padding-top: 20px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.sidenav h1, .sidenav h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidenav h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidenav .menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sidenav a i {
+    margin-right: 10px;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+    color: white;
+}
+.topbar {
+    margin-left: 280px; /* Adjusted to match the sidenav width */
+    padding: 10px 20px; /* Adjust padding to your preference */
+    background-color: #f1f1f1;
+    width: calc(100% - 280px); /* Adjusted to match the sidenav width */
+    height:80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.search-container .search-box {
+    margin-left: 10px; 
+    flex-grow: 1; 
+    width: 100%; 
+    padding: 5px; /* Adjust padding to your preference */
+}
+.search-container .bell-icon {
+    margin-left: 10px; 
+}
+.login-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+.maincontent {
+    margin-left: 250px;
+    margin-top: 60px; 
+    padding: 20px;
+}
+.maincontent h3 {
+    margin: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-left: 10px;
+}
+.btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: white;
+    color: black;
+}
+.btn-secondary {
+    background-color:white;
+    color: black;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-left: 650px;
+}
+.main {
+    margin-left: 50px; 
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    height: 135px;
+}
+.main .btn {
+    display: inline-block;
+    margin-left:0;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width:100%;
+}
+.btn-color1 {
+    background-color: rgb(95, 9, 115); 
+    color: white;
+    font-size: 20px;
+}
+.btn-lg.btn-color1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-direction: column;
+}
+.btn-color1 .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.btn-color1 .icon-text .number,
+.btn-color1 .icon-text i.bx {
+    font-size: 2em;
+    font-weight: bold;
+}
+.btn-color1 .label {
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+}
+.btn-color1 .dots-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+}
+.btn-color2 {
+    background-color:rgb(65, 190, 60); 
+    color: white;
+    font-size: 20px;
+}
+.btn-lg.btn-color2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-direction: column;
+}
+.btn-color2 .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.btn-color2 .icon-text .number,
+.btn-color2 .icon-text i.bx {
+    font-size: 2em;
+    font-weight: bold;
+}
+.btn-color2 .label {
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+}
+.btn-color2 .dots-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+}
+.btn-color3 {
+    background-color:rgb(245, 50, 50);
+    color: white;
+    font-size: 20px;
+}
+.btn-lg.btn-color3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-direction: column;
+}
+.btn-color3 .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.btn-color3 .icon-text .number,
+.btn-color3 .icon-text i.bx {
+    font-size: 2em;
+    font-weight: bold;
+}
+.btn-color3 .label {
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+}
+.btn-color3 .dots-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+}
+.btn-color4 {
+    background-color: rgb(225, 205, 21);
+    color: white;
+    font-size: 20px;
+}
+.btn-lg.btn-color4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-direction: column;
+}
+.btn-color4 .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.btn-color4 .icon-text .number,
+.btn-color4 .icon-text i.bx {
+    font-size: 2em;
+    font-weight: bold;
+}
+.btn-color4 .label {
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+}
+.btn-color4 .dots-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+}
+.chart-container {
+    position: absolute;
+    top: 50px; /* Adjust as necessary */
+    right: 20px; /* Adjust as necessary */
+    width: 300px; /* Adjust the width */
+    height: 300px; /* Adjust the height */
+}

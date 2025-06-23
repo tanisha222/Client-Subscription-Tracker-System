@@ -1,0 +1,294 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: rgb(224, 227, 243);
+}
+
+.sidenav {
+    height: 100vh;
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #421d9a;
+    color: white;
+    padding-top: 20px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sidenav h1,
+.sidenav h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidenav h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidenav .menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sidenav a i {
+    margin-right: 10px;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+    color: white;
+}
+.topbar {
+    margin-left: 280px; /* Adjusted to match the sidenav width */
+    padding: 10px 20px; /* Adjust padding to your preference */
+    background-color: #f1f1f1;
+    width: calc(100% - 280px);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.search-container .search-box {
+    margin-left: 10px; 
+    flex-grow: 1; 
+    width: 100%; 
+    padding: 5px; /* Adjust padding to your preference */
+}
+.search-container .bell-icon {
+    margin-left: 10px; 
+}
+
+.login-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.maincontent {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.maincontent h3 {
+    margin: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: black;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-left: 650px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.enter,
+.topic {
+    width: 90%;
+    height: 30px;
+}
+
+.begin {
+    width: 40%;
+    height: 30px;
+}
+
+.form-left,
+.form-right {
+    flex: 1;
+    padding: 10px;
+}
+
+.form h4 {
+    margin: 10px 0;
+}
+
+.form input[type="text"],
+.form select,
+.form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.btn-reset {
+    background-color: white;
+    border: 2px solid #421d9a;
+    color: #421d9a;
+    margin-right: 10px;
+    width: 180px;
+}
+
+.btn-submit {
+    background-color: #421d9a;
+    border: 2px solid #421d9a;
+    color: white;
+    width: 180px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-content {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.table-container {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.table-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.table-box h4 {
+    margin-top: 0;
+}
+
+.btn-reset, .btn-submit {
+    margin-top: 20px;
+}
+/* Add styles for the table container */
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width:1500px;
+    margin-right: 50px;
+}
+
+/* Add styles for the table headers */
+.table th {
+    background-color: rgb(224, 227, 243);
+    color: black;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Add styles for the table rows */
+.table td {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Status colors */
+.status-active {
+    color: green;
+    font-weight: bold;
+}
+
+.status-inactive {
+    color: red;
+    font-weight: bold;
+}
+
+/* Styles for search inputs */
+.search-client {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.search-box {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.search-client input {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

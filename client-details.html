@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Details</title>
+    <link rel="stylesheet" href="client-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        .maincontent {
+            margin-left: 300px; /* To account for sidenav */
+            padding: 20px;
+            width: calc(100% - 200px); /* To account for sidenav */
+            box-sizing: border-box;
+        }
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .manage-btn {
+            background-color: #421d9a;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        .delete-btn {
+            background-color: white;
+            color: #421d9a;
+            border: 2px solid #421d9a;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <h1>Panasonic</h1>
+        <i class='bx bx-menu-alt-right menu-icon'></i>
+        <h3>QMS</h3>
+        <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+        <a href="client.html" id="clientsManagementLink"><i class="fa-solid fa-users"></i> Clients Management</a>
+        <a href=""><i class="fa-solid fa-bell"></i> Subscription</a>
+        <a href=""><i class='bx bxs-report'></i> Reports</a>
+    </div>
+    <div class="topbar">
+        <div class="search-container">
+            <i class='bx bx-search search-icon'></i>
+            <input type="text" class="search-box" placeholder="Search...">
+            <i class='bx bx-bell bell-icon'></i>
+        </div>
+        <i class="fa-solid fa-user login-icon"></i>
+    </div>
+    <div class="maincontent">
+        <h3>Client Management</h3>
+        <div class="edit"> <a href="client.html" class="edit-button">Edit</a></div>
+        <div id="clientDetails">
+            <p><i class='bx bx-buildings'></i>&nbsp;&nbsp;<strong>Organisation Name</strong> <span id="displayOrganisationName"></span></p>
+            <p><i class='bx bx-globe'></i>&nbsp;&nbsp;<strong>Domain</strong> <span id="displayDomain"></span></p>
+            <p><i class='bx bx-user'></i>&nbsp;&nbsp;<strong>Contact Person</strong> <span id="displayContactPerson"></span></p>
+            <p><i class='bx bx-phone'></i>&nbsp;&nbsp;<strong>Mobile Number</strong> <span id="displayContactNumber"></span></p>
+            <p><i class='bx bx-envelope'></i>&nbsp;&nbsp;<strong>Email ID</strong> <span id="displayEmail"></span></p>
+            <p><i class="fa-solid fa-id-badge"></i>&nbsp;&nbsp;<strong>Issued Licenses</strong> <span id="displayLicenses"></span></p>
+            <p><i class='bx bx-calendar'></i>&nbsp;&nbsp;<strong>Validity</strong> <span id="displayValidFrom"></span> to <span id="displayValidTo"></span></p>
+            <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;<strong>Address</strong> <span id="displayAddress"></span></p>
+            <p><i class='bx bx-bell'></i>&nbsp;&nbsp;<strong>Subscription</strong> <span id="displaySubscription"></span></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Licence Number</th>
+                    <th>Branch</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5787589</td>
+                    <td>Mumbai, India</td>
+                    <td>Feb, 08th 2020</td>
+                    <td>Feb, 09th 2021</td>
+                    <td>Inactive</td>
+                    <td>
+                        <button class="manage-btn" onclick="openModal()">Manage</button>
+                        <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5787589</td>
+                    <td>Mumbai, India</td>
+                    <td>Feb, 08th 2020</td>
+                    <td>Feb, 09th 2021</td>
+                    <td>Inactive</td>
+                    <td>
+                        <button class="manage-btn" onclick="openModal()">Manage</button>
+                        <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5787589</td>
+                    <td>Mumbai, India</td>
+                    <td>Feb, 08th 2020</td>
+                    <td>Feb, 09th 2021</td>
+                    <td>Inactive</td>
+                    <td>
+                        <button class="manage-btn" onclick="openModal()">Manage</button>
+                        <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5787589</td>
+                    <td>Mumbai, India</td>
+                    <td>Feb, 08th 2020</td>
+                    <td>Feb, 09th 2021</td>
+                    <td>Inactive</td>
+                    <td>
+                        <button class="manage-btn" onclick="openModal()">Manage</button>
+                        <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!-- The Modal -->
+<div id="manageModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Edit Subscription</h2>
+        <div class="form-group">
+            <label for="licenceNumber">Licence Number</label>
+            <input type="text" id="licenceNumber" name="licenceNumber" placeholder="Enter licence number">
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <h3>Validity</h3>
+            <div class="validity-row">
+                <div class="date-section">
+                    <input type="date" class="begin" id="validFrom" name="validFrom" value="" min="2000-01-01" max="2040-12-31">
+                </div>
+                <div class="to-label">To</div>
+                <div class="date-section">
+                    <input type="date" class="end" id="validTo" name="validTo" value="" min="2000-01-01" max="2040-12-31">
+                </div>
+            </div>
+        </div>
+        <button onclick="saveChanges()">Done</button>
+    </div>
+</div>
+
+    <script src="client-details.js"></script>
+</body>
+</html>

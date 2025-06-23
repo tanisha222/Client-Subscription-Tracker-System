@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="client.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="sidenav">
+        <h1>Panasonic</h1>
+        <i class='bx bx-menu-alt-right menu-icon'></i>
+        <h3>QMS</h3>
+        <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+        <a href="client.html" id="clientsManagementLink"><i class="fa-solid fa-users"></i> Clients Management</a>
+        <a href=""><i class="fa-solid fa-bell"></i> Subscription</a>
+        <a href=""><i class='bx bxs-report'></i> Reports</a>
+    </div>
+    <div class="topbar">
+        <div class="search-container">
+            <i class='bx bx-search search-icon'></i>
+            <input type="text" class="search-box" placeholder="Search...">
+            <i class='bx bx-bell bell-icon'></i>
+        </div>
+        <i class="fa-solid fa-user login-icon"></i>
+    </div>
+    <div class="maincontent">
+        <div id="addClientSection">
+            <div class="header-container">
+                <h3>Add Client</h3>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-sm">Add Client</button>
+                    <button type="button" class="btn btn-secondary btn-sm">June 29, 2024: Today</button><br>
+                </div>
+            </div>
+            <form id="clientForm">
+                <div class="form-container">
+                    <div class="form-left">
+                        <h4>Organisation Name</h4>
+                        <input type="text" class="enter" placeholder="Enter Organisation Name here" id="organisationName">
+                        <h4>Contact Person</h4>
+                        <input type="text" class="enter" placeholder="Enter Contact person name" id="contactPerson">
+                        <h4>Email</h4>
+                        <input type="text" class="enter" placeholder="Enter email address" id="email">
+                        <h4>Validity</h4>
+                        <input type="date" class="begin" placeholder="DD/MM/YYYY" id="validFrom"
+                            value="" min="2000-01-01" max="2040-12-31">
+                        &nbsp &nbsp &nbsp To &nbsp &nbsp &nbsp
+                        <input type="date" class="begin" placeholder="DD/MM/YYYY" id="validTo"
+                            value="" min="2000-01-01" max="2040-12-31">
+                        <h4>Subscription</h4>
+                        <select name="subscription" class="topic" id="subscription">
+                            <option value="" selected="selected">Select Subscription</option>
+                        </select>
+                    </div>
+                    <div class="form-right">
+                        <h4>Domain</h4>
+                        <select name="domain" class="topic" id="domain">
+                            <option value="" selected="selected">Select Domain</option>
+                        </select>
+                        <h4>Contact Number</h4>
+                        <input type="text" class="enter" placeholder="Enter Contact Number" id="contactNumber">
+                        <h4>Address</h4>
+                        <input type="text" class="enter" placeholder="Enter Address here" id="address">
+                        <h4>Number of licences</h4>
+                        <select name="licenses" class="topic" id="licenses">
+                            <option value="" selected="selected">Select number of licences</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons-container">
+                    <button type="reset" class="btn btn-reset">Reset</button>
+                    <button type="submit" class="btn btn-submit" id="submitButton">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="maincontent">
+            <div class="table-container">
+                <div class="search-client">
+                    <h3>Search Client</h3>
+                    <div>
+                        <h4>Organisation Name</h4>
+                        <input type="text" class="search-box" id="searchOrganisationName" placeholder="Search by Organisation Name...">
+                    </div>
+                    <div>
+                        <h4>Contact Person</h4>
+                        <input type="text" class="search-box" id="searchContactPerson" placeholder="Search by Contact Person...">
+                    </div>
+                    <div>
+                        <h4>Contact Number</h4>
+                        <input type="text" class="search-box" id="searchContactNumber" placeholder="Search by Contact Number...">
+                    </div>
+                </div>
+                <table class="table" id="clientTable">
+                    <thead>
+                        <tr> 
+                            <th>Organisation Name</th>
+                            <th>Domain</th>
+                            <th>Contact Person</th>
+                            <th>Contact Number</th>
+                            <th>Licences</th>
+                            <th>End Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>   
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Organisation Name 1</td>
+                            <td>Health</td>
+                            <td>Ravneet Tajena</td>
+                            <td>9876786789</td>
+                            <td>4</td>
+                            <td>Feb,09th 2021</td>
+                            <td class="active">Active</td>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Organisation Name 2</td>
+                            <td>E-Commerce</td>
+                            <td>Nidhi Sharma</td>
+                            <td>8769876567</td>
+                            <td>4</td>
+                            <td>Feb,09th 2021</td>
+                            <td class="inactive">Inactive</td>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Organisation Name 1</td>
+                            <td>Travel</td>
+                            <td>Ranjan Singh</td>
+                            <td>9897654565</td>
+                            <td>8</td>
+                            <td>Feb,09th 2021</td>
+                            <td class="active">Active</td>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Organisation Name 1</td>
+                            <td>Health</td>
+                            <td>Ravneet Tajena</td>
+                            <td>9754213409</td>
+                            <td>3</td>
+                            <td>Feb,09th 2021</td>
+                            <td class="active">Active</td>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Organisation Name 1</td>
+                            <td>Health</td>
+                            <td>Ravneet Tajena</td>
+                            <td>8796123423</td>
+                            <td>4</td>
+                            <td>Feb,09th 2021</td>
+                            <td class="inactive">Inactive</td>
+                            <td><a href="#">Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="client.js"></script>
+    </body>
+    </html>

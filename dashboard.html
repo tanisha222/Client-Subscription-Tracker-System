@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .maincontent {
+            margin-left: 280px; 
+            padding: 20px;
+            padding-top: 80px; 
+            flex-grow: 1;
+            box-sizing: border-box;
+        }
+        .chart-container.line-chart {
+            position: fixed;
+            margin-top: 370px;
+            bottom: 300px; 
+            left: 320px; 
+            width: 500px; 
+            height: 250px; 
+            background-color: white;
+            border: 1px solid #ccc;
+            padding:30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chart-container.doughnut-chart {
+            position: fixed;
+            width: 530px;
+            height: 290px;
+            margin-top:370px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            bottom: 20px; 
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <h1>Panasonic</h1>
+        <i class='bx bx-menu-alt-right menu-icon'></i>
+        <h3>QMS</h3>
+        <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+        <a href="client.html"><i class="fa-solid fa-users"></i> Clients Management</a>
+        <a href="#"><i class="fa-solid fa-bell"></i> Subscription</a>
+        <a href="#"><i class='bx bxs-report'></i> Reports</a>
+    </div>
+    <div class="topbar">
+        <div class="search-container">
+            <i class='bx bx-search search-icon'></i>
+            <input type="text" class="search-box" placeholder="Search...">
+            <i class='bx bx-bell bell-icon'></i>
+        </div>
+        <i class="fa-solid fa-user login-icon"></i>
+    </div>
+    <div class="maincontent">
+        <div class="header-container">
+            <h3>Dashboard</h3>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm">Add Client<i class='bx bx-user-plus'></i></button>
+                <button type="button" class="btn btn-secondary btn-sm">June 29, 2024: Today</button>
+            </div>
+        </div>
+        <div class="main">
+            <button type="button" class="btn btn-primary btn-lg btn-color1">
+                <i class='bx bx-dots-horizontal-rounded dots-icon'></i>
+                <div class="icon-text">
+                    <i class='bx bx-notepad'></i>&nbsp 
+                    <div class="number">1091</div>
+                </div>
+                <div class="label">Active Clients</div>
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-color2">
+                <i class='bx bx-dots-horizontal-rounded dots-icon'></i>
+                <div class="icon-text">
+                    <i class='bx bx-notepad'></i>&nbsp 
+                    <div class="number">48</div>
+                </div>
+                <div class="label">Inactive Clients</div>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-color3">
+                <i class='bx bx-dots-horizontal-rounded dots-icon'></i>
+                <div class="icon-text">
+                    <i class='bx bx-notepad'></i>&nbsp 
+                    <div class="number">132</div>
+                </div>
+                <div class="label">Due Renewal</div>
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-color4">
+                <i class='bx bx-dots-horizontal-rounded dots-icon'></i>
+                <div class="icon-text">
+                    <i class='bx bx-notepad'></i>&nbsp 
+                    <div class="number">52</div>
+                </div>
+                <div class="label">Expired Subscription</div>
+            </button>
+        </div>
+    </div>
+
+    <div class="chart-container doughnut-chart">
+        <div class="chart-header">
+            <h4>Activity Sent</h4>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-circle green">
+                <div class="progress-fill green"></div>
+            </div>
+            <canvas id="doughnutChart" width="200" height="200"></canvas>
+        </div>
+    </div>
+
+    <div class="chart-container line-chart">
+        <div class="chart-header">
+            <h4>Subscription</h4>
+        </div>
+        <canvas id="lineChart" width="300" height="300"></canvas>
+    </div>
+
+    <script>
+        // Doughnut Chart Configuration
+        const doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
+        const doughnutChart = new Chart(doughnutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Message", "Email", "Whatsapp"],
+                datasets: [{
+                    data: [1569, 1310, 1120],
+                    backgroundColor: [
+                        "rgb(95, 9, 115)",
+                        "rgb(225, 205, 21)",
+                        "rgb(65, 190, 60)"
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutoutPercentage: 70,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ": " + tooltipItem.raw.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Line Chart Configuration
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        const lineChart = new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+                datasets: [
+                    { 
+                        label: 'Red Dataset',
+                        data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+                        borderColor: 'red',
+                        fill: false
+                    },
+                    { 
+                        label: 'Green Dataset',
+                        data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                        borderColor: 'green',
+                        fill: false
+                    },
+                    { 
+                        label: 'Blue Dataset',
+                        data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                        borderColor: 'blue',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Data Points'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Value'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
