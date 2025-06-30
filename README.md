@@ -2,15 +2,7 @@
 
 A responsive web-based dashboard built using **HTML**, **CSS**, and **JavaScript** to manage client subscriptions, monitor status, and streamline organizational client operations. This project is designed for internal quality management systems (QMS) where businesses can manage active/inactive clients, subscription renewals, and reports with ease.
 
-![image](https://github.com/user-attachments/assets/11cf04f9-a158-4b1a-8fc7-1ed6af90d66e)
-![image](https://github.com/user-attachments/assets/288c981d-517b-40b2-9e4c-579b761d6439)
-![image](https://github.com/user-attachments/assets/fd6e6ac7-3eee-4006-b5d0-09d424bf9f61)
-![image](https://github.com/user-attachments/assets/0ce19549-c861-4a58-a370-df30bcdd17df)
-
-
-
-
-## 🖥️ Project Features
+🖥️ Project Features
 
 ### 🔹 1. Dashboard Overview
 
@@ -65,19 +57,19 @@ A responsive web-based dashboard built using **HTML**, **CSS**, and **JavaScript
 
 ### Dashboard Overview
 
-![Dashboard](./path/to/your/dashboard_screenshot.png)
+![image](https://github.com/user-attachments/assets/11cf04f9-a158-4b1a-8fc7-1ed6af90d66e)
 
 ### Add Client Page
 
-![Add Client](./path/to/your/client_form_screenshot.png)
+![image](https://github.com/user-attachments/assets/288c981d-517b-40b2-9e4c-579b761d6439)
 
 ### Search Client Functionality
 
-![Search](./path/to/your/search_client_screenshot.png)
+![image](https://github.com/user-attachments/assets/fd6e6ac7-3eee-4006-b5d0-09d424bf9f61)
 
 ### Filtered Client Results
 
-![Filtered Result](./path/to/your/filtered_result_screenshot.png)
+![image](https://github.com/user-attachments/assets/0ce19549-c861-4a58-a370-df30bcdd17df)
 
 ## 📁 File Structure
 
