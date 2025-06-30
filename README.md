@@ -83,26 +83,9 @@ Project/
 └── images/               # Logo, icons, graphs, etc.
 ```
 
-## 🚀 How to Run
 
-1. Download or clone the repository.
-2. Open `dashboard.html` in your browser.
-3. Navigate through the sidebar to test all features.
-4. Make sure all local resources (CSS, JS, images) are properly linked.
 
-## ✅ Future Enhancements
 
-* Integrate with a backend (Node.js/PHP/Flask) for persistent data storage.
-* Add authentication for secured access.
-* Export client data as PDF or Excel.
-* Add automated subscription reminders via email.
 
-## 📌 Note
-
-This is a **static front-end prototype** intended to demonstrate UI/UX and basic interactions. It can be extended into a full-stack solution.
-
----
-
-Let me know if you'd like a downloadable `README.md` file or want me to help with pushing it to your GitHub repo.
 
 
