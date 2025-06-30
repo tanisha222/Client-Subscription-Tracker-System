@@ -1,19 +1,14 @@
-# Client-Subscription-Tracker-System
-This system helps manage client information, monitor subscription status, and visualize key metrics through an interactive dashboard.
-It includes features like client registration, renewal tracking, and real-time data charts for better business insights.
+📊 Panasonic QMS - Client Management Dashboard
+
+A responsive web-based dashboard built using **HTML**, **CSS**, and **JavaScript** to manage client subscriptions, monitor status, and streamline organizational client operations. This project is designed for internal quality management systems (QMS) where businesses can manage active/inactive clients, subscription renewals, and reports with ease.
 
 ![image](https://github.com/user-attachments/assets/11cf04f9-a158-4b1a-8fc7-1ed6af90d66e)
 ![image](https://github.com/user-attachments/assets/288c981d-517b-40b2-9e4c-579b761d6439)
 ![image](https://github.com/user-attachments/assets/fd6e6ac7-3eee-4006-b5d0-09d424bf9f61)
 ![image](https://github.com/user-attachments/assets/0ce19549-c861-4a58-a370-df30bcdd17df)
 
-Here is a detailed **README** description for your **Panasonic QMS Client Management Dashboard Project**, based on the screenshots you provided. You can copy this into your `README.md` file on GitHub.
 
----
 
-# 📊 Panasonic QMS - Client Management Dashboard
-
-A responsive web-based dashboard built using **HTML**, **CSS**, and **JavaScript** to manage client subscriptions, monitor status, and streamline organizational client operations. This project is designed for internal quality management systems (QMS) where businesses can manage active/inactive clients, subscription renewals, and reports with ease.
 
 ## 🖥️ Project Features
 
